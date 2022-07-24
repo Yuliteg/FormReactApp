@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import styled, { createGlobalStyle, css} from 'styled-components'
 
+
+export const cloudImg = "../img/Vector (4).png"
+
 export const GlobalStyle = createGlobalStyle`
 body {
   margin: 0;
@@ -45,7 +48,7 @@ export const StyledFormWrapper = styled.div`
   height: 50%;
   top: 13%;
   left: 5%;
-
+  z-index: 1;
 `
 
 export const StyledForm = styled.form`
@@ -53,7 +56,7 @@ position: absolute;
 width: 30vw;
 height: 575px;
 top: 50px;
-
+z-index: 1;
 
 `
 export const StyledInput = styled.input`
@@ -71,6 +74,7 @@ height: 100%;
   line-height: 180%;
 
   color: #2D2D2D;
+  z-index: 1;
 
   @media screen and (max-width: 450px) {
     width: 180%;
@@ -271,6 +275,105 @@ height: 93.47px;
 left: 96%;
 bottom: 10%;
 `
+
+export const Cloud1 = styled.img`
+  position: absolute;
+  left: 42.84%;
+  top: 17%;
+  width: 140px;
+  height: 103px;
+`
+
+export const Cloud2 = styled.img`
+position: absolute;
+left: 63%;
+top: 8.95%;
+bottom: 76.49%;
+width: 220px;
+height: 163px;
+
+@media screen and (max-width: 1000px) {
+     display: none;
+  }
+`
+
+export const Cloud3 = styled.img`
+position: absolute;
+left: 60%;
+top: 60%;
+bottom: 65.82%;
+width: 170px;
+height: 123px;
+z-index: -1;
+
+@media screen and (max-width: 850px) {
+     display: none;
+  }
+`
+
+export const Cloud4 = styled.img`
+position: absolute;
+left: 80%;
+right: 37.44%;
+top: 66.13%;
+bottom: 22.48%;
+z-index: -1;
+@media screen and (max-width: 700px) {
+     display: none;
+  }
+`
+
+export const Cloud5 = styled.img`
+position: absolute;
+left: -17%;
+top: 30.48%;
+width: 17%;
+height: 25%;
+z-index: -1;
+
+@media screen and (max-width: 1000px) {
+     display: none;
+  }
+`
+
+export const Cloud6 = styled.img`
+position: absolute;
+left: -20%;
+top: 60.48%;
+width: 17%;
+height: 25%;
+z-index: -1;
+
+@media screen and (max-width: 1000px) {
+     display: none;
+  }
+`
+export const Cloud7 = styled.img`
+position: absolute;
+left: 24%;
+top: 95%;
+width: 17%;
+height: 25%;
+z-index: -1;
+
+@media screen and (max-width: 1000px) {
+     display: none;
+  }
+`
+
+export const Cloud8 = styled.img`
+position: absolute;
+left: -3%;
+top: 105%;
+width: 13%;
+height: 18%;
+z-index: -1;
+
+@media screen and (max-width: 1000px) {
+     display: none;
+  }
+`
+
 
 
 

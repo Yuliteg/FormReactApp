@@ -6,7 +6,9 @@ import {GlobalStyle, StyledContainer, Content,
     StyledFormWrapper, StyledForm, StyledInput, 
     StyledTextArea, StyledError, StyledButton, ImgWrapper,
     ImgFigure3, ImgFigure4,CloudContainer, BottomContentContainer,
-    ImgVector, ImgFigure5, ImgFigure6, ImgFigure7
+    ImgVector, ImgFigure5, ImgFigure6, ImgFigure7, cloudImg, Cloud1,
+    Cloud2, Cloud3, Cloud4, Cloud5, Cloud6, Cloud7,
+    Cloud8
     } from "./styles.js";
 import Axious from 'axios'
 import Swal from 'sweetalert2'
@@ -31,7 +33,14 @@ function Container() {
             <ImgFigure4 src="../img/goodie1.png" alt="img goodie"></ImgFigure4>
 
 
-                    {/* <CloudContainer></CloudContainer> */}
+                     <Cloud1 src={cloudImg}></Cloud1> 
+                      <Cloud2 src={cloudImg}></Cloud2>
+                     <Cloud3 src={cloudImg}></Cloud3>  
+                     <Cloud4 src={cloudImg}></Cloud4>
+                    <Cloud5 src={cloudImg}></Cloud5>  
+                    <Cloud6 src={cloudImg}></Cloud6> 
+                    <Cloud7 src={cloudImg}></Cloud7> 
+                    <Cloud8 src={cloudImg}></Cloud8> 
 
           <BottomContentContainer>
              <ImgFigure5 src="../img/red_cartoon 3.png" alt="red cartoon"></ImgFigure5>
@@ -136,7 +145,7 @@ function Container() {
               id="name"
               value={data.name}
               />
-              <p style={{color:"red", fontFamily: 'Apercu Arabic Pro'}}>{formErrors.name}</p>
+              <p style={{color:"red", fontFamily: 'Apercu Arabic Pro', margin: 0}}>{formErrors.name}</p>
 
               <label htmlFor="email"></label>
                 <StyledInput 
@@ -147,7 +156,7 @@ function Container() {
                 id="email"
                 value={data.email}
                 />
-                 <p style={{color:"red", fontFamily: 'Apercu Arabic Pro'}}>{formErrors.email}</p>
+                 <p style={{color:"red", fontFamily: 'Apercu Arabic Pro', margin: 0}}>{formErrors.email}</p>
                  <label htmlFor="message"></label>
                   <StyledTextArea 
                   name="message" 
