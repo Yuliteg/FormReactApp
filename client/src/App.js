@@ -64,8 +64,7 @@ function Container() {
 
 
  function Form() {
-  const url = '/api/contact-form';
-
+  const url = 'https://testformreactapp-hosting.herokuapp.com/api/contact-form';
 
      const [data, setData] = useState({
         name: "",

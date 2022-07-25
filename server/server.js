@@ -4,6 +4,7 @@ const UserContactDetails = require('./models/UserContactDetails');
 
 const mongoPath = 'mongodb+srv://testDbUser:vRU5Z9b8PKWkLiMS@cluster0.uhmuf.mongodb.net/?retryWrites=true&w=majority';
 const app = express();
+const cors = require("cors");
 
 require("dotenv").config()
 
@@ -18,6 +19,8 @@ dbConnection.on('open', () => {
 });
 
 app.use(express.json());
+app.use(cors());
+
 app.post('/api/contact-form', async (req, res) => {
   try {
     const newUserContactDetails = new UserContactDetails({
