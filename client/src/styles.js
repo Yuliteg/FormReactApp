@@ -73,12 +73,10 @@ export const StyledFormWrapper = styled.div`
     margin-top: 10px;
     margin-bottom: 10px;
     color: red;
-     font-family: 'Apercu Arabic Pro'
-     
+     font-family: 'Apercu Arabic Pro'    
   }
    }
 `
-
 
 export const BottomContentContainer = styled.div`
   box-sizing: border-box;

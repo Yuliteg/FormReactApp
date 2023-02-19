@@ -1,34 +1,19 @@
-import { useState, Component, useEffect } from "react";
-import {
-  StyledContainer,
-  StyledFormWrapper, StyledForm, StyledInput,
-  StyledTextArea, StyledError, StyledButton
-} from "../styles";
-import Axious from 'axios'
-import Swal from 'sweetalert2'
+import { useState } from "react";
+import { StyledFormWrapper } from "../styles";
+import Axious from 'axios';
+import Swal from 'sweetalert2';
 
-const Form = () => {
-
-  const url = 'https://blue-magpie-shoe.cyclic.app/';
-
-  const [data, setData] = useState({
-    name: "",
-    email: "",
-    message: ""
-  })
-
-  const [formErrors, setFormErrors] = useState({})
-  const [isSubmit, setIsSubmit] = useState(false)
+const Form = ({data, setData, url, formErrors, setFormErrors}) => {
 
   function handle(e) {
-    const newdata = { ...data }
-    newdata[e.target.id] = e.target.value
-    setData(newdata)
+    const newdata = { ...data };
+    newdata[e.target.id] = e.target.value;
+    setData(newdata);
   }
 
   function submit(e) {
     e.preventDefault();
-    setFormErrors(validate(data))
+    setFormErrors(validate(data));
 
     Axious.post(url, {
       name: data.name,
@@ -40,7 +25,6 @@ const Form = () => {
           Swal.fire("Thank you!", "Your request has been accepted for processing. Our manager will contact you soon. ", "success").then(() => {
             window.location.reload();
           });
-
         } else {
           Swal.fire({
             icon: 'error',
@@ -52,24 +36,18 @@ const Form = () => {
       })
   }
 
-  useEffect(() => {
-    console.log(formErrors)
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
-    }
-  }, [formErrors])
-
   function validate(values) {
     const errors = {}
     if (!values.name) {
-      errors.name = "Name is required!"
+      errors.name = "Name is required!";
     }
     if (!values.email) {
-      errors.email = "Email is required!"
+      errors.email = "Email is required!";
     }
     if (!values.message) {
-      errors.message = "Message is required!"
+      errors.message = "Message is required!";
     }
-    return errors
+    return errors;
   }
 
   return (
@@ -88,7 +66,6 @@ const Form = () => {
             value={data.name}
           />
           <p className="error-msg">{formErrors.name}</p>
-
           <label htmlFor="email"></label>
           <input
             className="form-input"
@@ -109,9 +86,7 @@ const Form = () => {
             id="message"
             value={data.message}
           />
-
           <p className="error-msg" >{formErrors.message}</p>
-          {/* <StyledError></StyledError> */}
           <button className="form-send-btn">Send Message</button>
         </form>
       </StyledFormWrapper>
