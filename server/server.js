@@ -2,7 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const UserContactDetails = require('./models/UserContactDetails');
 
-const mongoPath = 'mongodb+srv://testDbUser:vRU5Z9b8PKWkLiMS@cluster0.uhmuf.mongodb.net/?retryWrites=true&w=majority';
+const mongoPath = 'mongodb+srv://yfedchenko1:1vkRECf0kL5mnctC@form.bjjva.mongodb.net/?retryWrites=true&w=majority';
+
 const app = express();
 const cors = require("cors");
 
