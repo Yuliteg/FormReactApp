@@ -1,4 +1,4 @@
 # FormReactApp
 
 This is link for my clien site application https://steady-meerkat-fa5aa3.netlify.app
-This is link for my server site https://testformreactapp-hosting.herokuapp.com/api/contact-form
+This is link for my sever-part: https://blue-magpie-shoe.cyclic.app/
