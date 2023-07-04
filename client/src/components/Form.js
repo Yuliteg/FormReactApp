@@ -54,7 +54,7 @@ const Form = ({data, setData, url, formErrors, setFormErrors}) => {
     <>
       <StyledFormWrapper>
         <form onSubmit={(e) => submit(e)} className="my-form">
-          <h2>Reach out to us!</h2>
+          <h2 className="text">Reach out to us!</h2>
           <label htmlFor="name"></label>
           <input
             className="form-input"
